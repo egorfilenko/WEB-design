@@ -1,2 +1,1005 @@
-# WEB-design
-Основны WEB-дизайна
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы WEB-дизайна</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <!-- Верхняя навигация -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" onclick="navigateTo('home')" class="flex items-center gap-2 text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent cursor-pointer">
+                    <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                    </svg>
+                    Основы WEB-дизайна
+                </a>
+                <button onclick="navigateTo('home')" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                    На главную
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главная страница -->
+    <div id="home" class="page active">
+        <div class="min-h-screen py-12 px-4 sm:px-6 lg:px-8 mt-16">
+            <div class="max-w-7xl mx-auto">
+                <!-- Header -->
+                <div class="text-center mb-16">
+                    <div class="inline-block p-3 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl mb-6 shadow-lg">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                        </svg>
+                    </div>
+                    <h1 class="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                        Основы WEB-дизайна
+                    </h1>
+                    <div class="max-w-3xl mx-auto space-y-4 text-slate-700 text-lg">
+                        <p>
+                            Всемирная паутина (WWW) появилась в 1992 году благодаря Тиму Бернерсу-Ли. 
+                            Internet вырос из сети ARPANET, созданной для военных целей. 
+                            К 1995 году в сети уже было 10 млн компьютеров!
+                        </p>
+                        <p>
+                            WEB-дизайн — это графический дизайн, перенесенный в интерактивную среду. 
+                            Если сравнивать с другими областями, он ближе всего к полиграфии, 
+                            но технологии создания совершенно разные.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Info Cards -->
+                <div class="grid md:grid-cols-3 gap-6 mb-16">
+                    <div class="p-6 bg-white/80 backdrop-blur rounded-xl border-blue-100 shadow-lg hover:shadow-xl transition-shadow border">
+                        <h3 class="text-xl font-semibold mb-3 text-blue-700">Раньше</h3>
+                        <p class="text-slate-600">
+                            Internet был просто сетью компьютеров для ученых
+                        </p>
+                    </div>
+                    <div class="p-6 bg-white/80 backdrop-blur rounded-xl border-indigo-100 shadow-lg hover:shadow-xl transition-shadow border">
+                        <h3 class="text-xl font-semibold mb-3 text-indigo-700">Сейчас</h3>
+                        <p class="text-slate-600">
+                            Это важнейший информационный источник, без которого нельзя представить жизнь
+                        </p>
+                    </div>
+                    <div class="p-6 bg-white/80 backdrop-blur rounded-xl border-purple-100 shadow-lg hover:shadow-xl transition-shadow border">
+                        <h3 class="text-xl font-semibold mb-3 text-purple-700">WEB-дизайн</h3>
+                        <p class="text-slate-600">
+                            Это создание удобных и красивых сайтов, где люди могут легко найти нужную информацию
+                        </p>
+                    </div>
+                </div>
+
+                <!-- What You Will Learn -->
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-center mb-8 text-slate-800">Что вы узнаете из этого руководства:</h2>
+                    <div class="max-w-3xl mx-auto bg-white/80 backdrop-blur rounded-xl p-8 shadow-lg border border-slate-200">
+                        <ul class="space-y-3 text-slate-700 text-lg">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>Как создаются сайты и что такое HTML</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>Как правильно располагать элементы на странице (композиция)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>Что такое дизайн-мышление и как понять потребности пользователей</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>Чем отличается UX от UI дизайна</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <span>Какие бывают типы сайтов и как создать хороший сайт</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Navigation Grid -->
+                <div>
+                    <h2 class="text-3xl font-bold text-center mb-10 text-slate-800">Выберите раздел для изучения:</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <a onclick="navigateTo('introduction')" class="group block cursor-pointer">
+                            <div class="h-full p-6 bg-white/80 backdrop-blur border-slate-200 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 rounded-xl border">
+                                <div class="inline-flex p-3 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 mb-4 group-hover:scale-110 transition-transform">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2 text-slate-800 group-hover:text-blue-600 transition-colors">
+                                    Введение в WEB-дизайн
+                                </h3>
+                                <p class="text-slate-600">
+                                    Основные понятия и задачи WEB-дизайна
+                                </p>
+                            </div>
+                        </a>
+
+                        <a onclick="navigateTo('composition')" class="group block cursor-pointer">
+                            <div class="h-full p-6 bg-white/80 backdrop-blur border-slate-200 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 rounded-xl border">
+                                <div class="inline-flex p-3 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 mb-4 group-hover:scale-110 transition-transform">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3zM14 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1h-4a1 1 0 01-1-1v-3z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2 text-slate-800 group-hover:text-blue-600 transition-colors">
+                                    Основы композиции
+                                </h3>
+                                <p class="text-slate-600">
+                                    Свойства элементов и принципы композиции
+                                </p>
+                            </div>
+                        </a>
+
+                        <a onclick="navigateTo('design-thinking')" class="group block cursor-pointer">
+                            <div class="h-full p-6 bg-white/80 backdrop-blur border-slate-200 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 rounded-xl border">
+                                <div class="inline-flex p-3 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 mb-4 group-hover:scale-110 transition-transform">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2 text-slate-800 group-hover:text-blue-600 transition-colors">
+                                    Дизайн-мышление
+                                </h3>
+                                <p class="text-slate-600">
+                                    Метод решения задач и понимания пользователей
+                                </p>
+                            </div>
+                        </a>
+
+                        <a onclick="navigateTo('ux-ui')" class="group block cursor-pointer">
+                            <div class="h-full p-6 bg-white/80 backdrop-blur border-slate-200 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 rounded-xl border">
+                                <div class="inline-flex p-3 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 mb-4 group-hover:scale-110 transition-transform">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2 text-slate-800 group-hover:text-blue-600 transition-colors">
+                                    UX/UI Дизайн
+                                </h3>
+                                <p class="text-slate-600">
+                                    Разница между опытом и интерфейсом
+                                </p>
+                            </div>
+                        </a>
+
+                        <a onclick="navigateTo('practice')" class="group block cursor-pointer">
+                            <div class="h-full p-6 bg-white/80 backdrop-blur border-slate-200 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 rounded-xl border">
+                                <div class="inline-flex p-3 rounded-xl bg-gradient-to-br from-rose-500 to-red-500 mb-4 group-hover:scale-110 transition-transform">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2 text-slate-800 group-hover:text-blue-600 transition-colors">
+                                    Практика WEB-дизайна
+                                </h3>
+                                <p class="text-slate-600">
+                                    Работа с цветом, шрифтами и макетами
+                                </p>
+                            </div>
+                        </a>
+
+                        <a onclick="navigateTo('site-types')" class="group block cursor-pointer">
+                            <div class="h-full p-6 bg-white/80 backdrop-blur border-slate-200 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 rounded-xl border">
+                                <div class="inline-flex p-3 rounded-xl bg-gradient-to-br from-indigo-500 to-blue-500 mb-4 group-hover:scale-110 transition-transform">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1V5z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2 text-slate-800 group-hover:text-blue-600 transition-colors">
+                                    Типы сайтов
+                                </h3>
+                                <p class="text-slate-600">
+                                    Классификация и назначение различных сайтов
+                                </p>
+                            </div>
+                        </a>
+
+                        <a onclick="navigateTo('rules')" class="group block cursor-pointer">
+                            <div class="h-full p-6 bg-white/80 backdrop-blur border-slate-200 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 rounded-xl border">
+                                <div class="inline-flex p-3 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 mb-4 group-hover:scale-110 transition-transform">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2 text-slate-800 group-hover:text-blue-600 transition-colors">
+                                    Правила хорошего сайта
+                                </h3>
+                                <p class="text-slate-600">
+                                    11 основных правил создания качественного сайта
+                                </p>
+                            </div>
+                        </a>
+
+                        <a onclick="navigateTo('glossary')" class="group block cursor-pointer">
+                            <div class="h-full p-6 bg-white/80 backdrop-blur border-slate-200 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 rounded-xl border">
+                                <div class="inline-flex p-3 rounded-xl bg-gradient-to-br from-violet-500 to-purple-500 mb-4 group-hover:scale-110 transition-transform">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2 text-slate-800 group-hover:text-blue-600 transition-colors">
+                                    Глоссарий
+                                </h3>
+                                <p class="text-slate-600">
+                                    Словарь терминов WEB-дизайна
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Введение в WEB-дизайн -->
+    <div id="introduction" class="page">
+        <div class="min-h-screen py-12 px-4 sm:px-6 lg:px-8 mt-16">
+            <div class="max-w-5xl mx-auto">
+                <div class="flex gap-3 mb-8">
+                    <button onclick="navigateTo('home')" class="flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur hover:bg-white border-slate-300 rounded-lg border transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                        </svg>
+                        Главная
+                    </button>
+                </div>
+
+                <div class="bg-white/90 backdrop-blur rounded-2xl shadow-xl border border-slate-200 p-8 md:p-12">
+                    <h1 class="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                        Что такое WEB-дизайн?
+                    </h1>
+                    
+                    <div class="space-y-8 prose prose-slate max-w-none">
+                        <div class="p-6 bg-gradient-to-br from-blue-50 to-indigo-50 border-blue-200 rounded-xl border">
+                            <h2 class="text-2xl font-semibold text-blue-700 mb-3">Основное определение:</h2>
+                            <p class="text-slate-700 text-lg">
+                                WEB-дизайн — это графический дизайн, перенесенный в интерактивную среду. 
+                                Он по сути ближе всего подходит к полиграфии. Но технология создания сайтов 
+                                и полиграфической продукции различна "как две вселенные".
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 class="text-2xl font-semibold text-slate-800 mb-4">Чем занимается WEB-дизайнер:</h2>
+                            <p class="text-slate-700 text-lg mb-4">
+                                Web-дизайнер создает полноценный продукт, а не просто его оформляет. 
+                                В отличие от полиграфии, где дизайн лишь оформление изделия, 
+                                в web-дизайне дизайн — это суть самого изделия.
+                            </p>
+                        </div>
+
+                        <div class="p-6 bg-gradient-to-br from-purple-50 to-pink-50 border-purple-200 rounded-xl border">
+                            <div class="flex items-start gap-3 mb-3">
+                                <svg class="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                                </svg>
+                                <h2 class="text-2xl font-semibold text-purple-700">Главная цель WEB-дизайна:</h2>
+                            </div>
+                            <p class="text-slate-700 text-lg">
+                                Помочь пользователю быстро и интуитивно сориентироваться на выбранном им сайте. 
+                                Посетитель должен найти ресурс полезным, визуально приятным, простым и понятным в использовании.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 class="text-2xl font-semibold text-slate-800 mb-6">Что должен учитывать дизайнер:</h2>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="p-5 border-blue-200 hover:shadow-lg transition-shadow rounded-xl border bg-white">
+                                    <div class="flex items-start gap-3">
+                                        <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                        </svg>
+                                        <div>
+                                            <h3 class="text-lg font-semibold text-blue-700 mb-2">Близость пользователю</h3>
+                                            <p class="text-slate-600">
+                                                Сайт должен быть близок, понятен и соразмерен пользователю
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="p-5 border-indigo-200 hover:shadow-lg transition-shadow rounded-xl border bg-white">
+                                    <div class="flex items-start gap-3">
+                                        <svg class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                                        </svg>
+                                        <div>
+                                            <h3 class="text-lg font-semibold text-indigo-700 mb-2">Визуальная привлекательность</h3>
+                                            <p class="text-slate-600">
+                                                Обязательно визуально приятен
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="p-5 border-purple-200 hover:shadow-lg transition-shadow rounded-xl border bg-white">
+                                    <div class="flex items-start gap-3">
+                                        <svg class="w-5 h-5 text-purple-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                                        </svg>
+                                        <div>
+                                            <h3 class="text-lg font-semibold text-purple-700 mb-2">Оригинальность</h3>
+                                            <p class="text-slate-600">
+                                                По возможности необычен, интригующ и загадочен
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="p-5 border-pink-200 hover:shadow-lg transition-shadow rounded-xl border bg-white">
+                                    <div class="flex items-start gap-3">
+                                        <svg class="w-5 h-5 text-pink-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                                        </svg>
+                                        <div>
+                                            <h3 class="text-lg font-semibold text-pink-700 mb-2">Возвращаемость</h3>
+                                            <p class="text-slate-600">
+                                                Должен оставлять хорошие впечатления, чтобы пользователь захотел вернуться
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-6 bg-gradient-to-br from-green-50 to-emerald-50 border-green-200 rounded-xl border">
+                            <h2 class="text-2xl font-semibold text-green-700 mb-4">Простыми словами:</h2>
+                            <div class="space-y-3 text-slate-700 text-lg">
+                                <p class="flex items-start gap-2">
+                                    <span class="text-green-600">✓</span>
+                                    <span><span class="font-semibold text-green-700">Хороший дизайн</span> = пользователь легко находит что нужно и хочет вернуться</span>
+                                </p>
+                                <p class="flex items-start gap-2">
+                                    <span class="text-red-600">✗</span>
+                                    <span><span class="font-semibold text-red-700">Плохой дизайн</span> = пользователь запутался и больше не придет</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основы композиции -->
+    <div id="composition" class="page">
+        <div class="min-h-screen py-12 px-4 sm:px-6 lg:px-8 mt-16">
+            <div class="max-w-5xl mx-auto">
+                <div class="flex gap-3 mb-8">
+                    <button onclick="navigateTo('home')" class="flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur hover:bg-white border-slate-300 rounded-lg border transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                        </svg>
+                        Главная
+                    </button>
+                </div>
+
+                <div class="bg-white/90 backdrop-blur rounded-2xl shadow-xl border border-slate-200 p-8 md:p-12">
+                    <h1 class="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                        Основы композиции для WEB
+                    </h1>
+                    
+                    <div class="space-y-8 prose prose-slate max-w-none">
+                        <div class="p-6 bg-gradient-to-br from-purple-50 to-pink-50 border-purple-200 rounded-xl border">
+                            <h2 class="text-2xl font-semibold text-purple-700 mb-3">Что такое композиция:</h2>
+                            <p class="text-slate-700 text-lg">
+                                Композиция — это объединение отдельных графических элементов в единое целое. 
+                                Представьте, что вы расставляете мебель в комнате — вы создаете композицию 
+                                из стола, стульев, шкафа.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 class="text-2xl font-semibold text-slate-800 mb-6">6 свойств графических элементов:</h2>
+                            
+                            <div class="space-y-6">
+                                <div class="p-6 border-blue-200 rounded-xl border bg-white">
+                                    <div class="flex items-start gap-3 mb-3">
+                                        <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                                        </svg>
+                                        <h3 class="text-xl font-semibold text-blue-700">1. Форма элемента</h3>
+                                    </div>
+                                    <ul class="list-disc list-inside space-y-2 text-slate-700 ml-9 text-lg">
+                                        <li><span class="font-semibold text-slate-800">Объем</span> — когда предмет имеет три измерения (как коробка)</li>
+                                        <li><span class="font-semibold text-slate-800">Плоскость</span> — когда предмет плоский (как лист бумаги)</li>
+                                        <li><span class="font-semibold text-slate-800">Средства для гармонии:</span> пропорции, масштабность, ритм, контраст, нюанс</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-6 border-indigo-200 rounded-xl border bg-white">
+                                    <div class="flex items-start gap-3 mb-3">
+                                        <svg class="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"/>
+                                        </svg>
+                                        <h3 class="text-xl font-semibold text-indigo-700">2. Расположение элементов</h3>
+                                    </div>
+                                    <ul class="list-disc list-inside space-y-2 text-slate-700 ml-9 text-lg">
+                                        <li>Элементы должны быть связаны друг с другом</li>
+                                        <li>Каждый элемент должен быть "привязан" к ближайшему элементу</li>
+                                        <li>Выравнивание по горизонтальным или вертикальным линиям</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-6 border-purple-200 rounded-xl border bg-white">
+                                    <div class="flex items-start gap-3 mb-3">
+                                        <svg class="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/>
+                                        </svg>
+                                        <h3 class="text-xl font-semibold text-purple-700">3. Визуальная масса</h3>
+                                    </div>
+                                    <ul class="list-disc list-inside space-y-2 text-slate-700 ml-9 text-lg">
+                                        <li>Должен быть главный элемент (как король в шахматах)</li>
+                                        <li>Остальные элементы группируются вокруг главного</li>
+                                        <li>Главный элемент выделяется формой, цветом или размером</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-6 border-pink-200 rounded-xl border bg-white">
+                                    <div class="flex items-start gap-3 mb-3">
+                                        <svg class="w-6 h-6 text-pink-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                                        </svg>
+                                        <h3 class="text-xl font-semibold text-pink-700">4. Текстура</h3>
+                                    </div>
+                                    <ul class="list-disc list-inside space-y-2 text-slate-700 ml-9 text-lg">
+                                        <li>Как выглядит поверхность: как ткань, дерево, бумага</li>
+                                        <li>Или просто однородный цвет</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-6 border-rose-200 rounded-xl border bg-white">
+                                    <div class="flex items-start gap-3 mb-3">
+                                        <svg class="w-6 h-6 text-rose-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                                        </svg>
+                                        <h3 class="text-xl font-semibold text-rose-700">5. Цвет</h3>
+                                    </div>
+                                    <ul class="list-disc list-inside space-y-2 text-slate-700 ml-9 text-lg">
+                                        <li><span class="font-semibold text-slate-800">Цветовой тон</span> — разные оттенки цвета</li>
+                                        <li><span class="font-semibold text-slate-800">Насыщенность</span> — насколько цвет яркий</li>
+                                        <li><span class="font-semibold text-slate-800">Светлота</span> — насколько цвет светлый</li>
+                                        <li><span class="font-semibold text-slate-800">Цветовые гаммы:</span> теплые (желтый, оранжевый, красный) и холодные (зеленый, синий, фиолетовый)</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-6 border-amber-200 rounded-xl border bg-white">
+                                    <div class="flex items-start gap-3 mb-3">
+                                        <svg class="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                        </svg>
+                                        <h3 class="text-xl font-semibold text-amber-700">6. Динамика</h3>
+                                    </div>
+                                    <ul class="list-disc list-inside space-y-2 text-slate-700 ml-9 text-lg">
+                                        <li><span class="font-semibold text-slate-800">Статичные элементы</span> — неподвижные, спокойные (как круг)</li>
+                                        <li><span class="font-semibold text-slate-800">Динамичные элементы</span> — создают ощущение движения (как прямоугольник)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent my-8"></div>
+
+                        <div>
+                            <h2 class="text-2xl font-semibold text-slate-800 mb-6">Принципы хорошей композиции:</h2>
+                            
+                            <div class="space-y-6">
+                                <div class="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 border-blue-200 rounded-xl border">
+                                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Целостность</h3>
+                                    <ul class="list-disc list-inside space-y-2 text-slate-700 text-lg">
+                                        <li>Все элементы должны быть объединены в группы</li>
+                                        <li>Даже красивые элементы по отдельности не создадут целостную картину</li>
+                                        <li>Используйте одинаковые цвета, размеры или расположение для связи элементов</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-6 bg-gradient-to-br from-green-50 to-emerald-50 border-green-200 rounded-xl border">
+                                    <h3 class="text-xl font-semibold text-green-700 mb-3">Равновесие</h3>
+                                    <ul class="list-disc list-inside space-y-2 text-slate-700 text-lg">
+                                        <li>Все элементы должны быть сбалансированы, как на качелях</li>
+                                        <li>Центр композиции — это место, где сосредоточены главные связи между элементами</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-6 bg-gradient-to-br from-purple-50 to-violet-50 border-purple-200 rounded-xl border">
+                                    <h3 class="text-xl font-semibold text-purple-700 mb-3">Симметрия</h3>
+                                    <ul class="list-disc list-inside space-y-2 text-slate-700 text-lg">
+                                        <li>Строгость, спокойствие, порядок</li>
+                                        <li>Как бабочка — левая и правая части одинаковы</li>
+                                        <li>Подходит для "важных", "представительных" сайтов</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-6 bg-gradient-to-br from-orange-50 to-amber-50 border-orange-200 rounded-xl border">
+                                    <h3 class="text-xl font-semibold text-orange-700 mb-3">Асимметрия</h3>
+                                    <ul class="list-disc list-inside space-y-2 text-slate-700 text-lg">
+                                        <li>Движение, динамизм, жизнь, свобода</li>
+                                        <li>Элементы расположены несимметрично</li>
+                                        <li>Более выразительна, но сложнее в создании</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Дизайн-мышление -->
+    <div id="design-thinking" class="page">
+        <div class="min-h-screen py-12 px-4 sm:px-6 lg:px-8 mt-16">
+            <div class="max-w-5xl mx-auto">
+                <div class="flex gap-3 mb-8">
+                    <button onclick="navigateTo('home')" class="flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur hover:bg-white border-slate-300 rounded-lg border transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                        </svg>
+                        Главная
+                    </button>
+                </div>
+
+                <div class="bg-white/90 backdrop-blur rounded-2xl shadow-xl border border-slate-200 p-8 md:p-12">
+                    <h1 class="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                        Дизайн-мышление: как с��здавать то, что нужно людям
+                    </h1>
+                    
+                    <div class="space-y-8 prose prose-slate max-w-none">
+                        <div class="p-6 bg-gradient-to-br from-purple-50 to-pink-50 border-purple-200 rounded-xl border">
+                            <h2 class="text-2xl font-semibold text-purple-700 mb-3">Что такое дизайн-мышление:</h2>
+                            <p class="text-slate-700 text-lg">
+                                Дизайн-мышление — метод решения задач, который помогает понять пользователя 
+                                и найти решения его проблем. Главное — в центре стоят потребности конкретного человека, 
+                                а не технологии или мнение начальства.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 class="text-2xl font-semibold text-slate-800 mb-6">5 этапов дизайн-мышления:</h2>
+                            
+                            <div class="space-y-6">
+                                <div class="p-6 border-rose-200 rounded-xl border bg-white">
+                                    <div class="flex items-start gap-3 mb-3">
+                                        <svg class="w-6 h-6 text-rose-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                        </svg>
+                                        <h3 class="text-xl font-semibold text-rose-700">1. Эмпатия (Сопереживание)</h3>
+                                    </div>
+                                    <div class="ml-9 space-y-3 text-slate-700 text-lg">
+                                        <p><span class="font-semibold text-slate-800">Задача:</span> Понять пользователя, почувствовать его проблемы</p>
+                                        <p><span class="font-semibold text-slate-800">Как делать:</span> Глубинные интервью, наблюдение за пользователями</p>
+                                        <p><span class="font-semibold text-slate-800">Результат:</span> Карта эмпатии — понимание что пользователь видит, слышит, думает, чувствует</p>
+                                    </div>
+                                </div>
+
+                                <div class="p-6 border-blue-200 rounded-xl border bg-white">
+                                    <div class="flex items-start gap-3 mb-3">
+                                        <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                                        </svg>
+                                        <h3 class="text-xl font-semibold text-blue-700">2. Фокусировка</h3>
+                                    </div>
+                                    <div class="ml-9 space-y-3 text-slate-700 text-lg">
+                                        <p><span class="font-semibold text-slate-800">Задача:</span> Выделить главную проблему пользователя</p>
+                                        <p><span class="font-semibold text-slate-800">Как делать:</span> Проанализировать собранные данные, сформулировать конкретный вопрос</p>
+                                        <p><span class="font-semibold text-slate-800">Пример вопроса:</span> "Как помочь риелтору получать доступ к CRM системе вне офиса?"</p>
+                                    </div>
+                                </div>
+
+                                <div class="p-6 border-amber-200 rounded-xl border bg-white">
+                                    <div class="flex items-start gap-3 mb-3">
+                                        <svg class="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                        </svg>
+                                        <h3 class="text-xl font-semibold text-amber-700">3. Генерация идей</h3>
+                                    </div>
+                                    <div class="ml-9 space-y-3 text-slate-700 text-lg">
+                                        <p><span class="font-semibold text-slate-800">Задача:</span> Найти как можно больше решений</p>
+                                        <p><span class="font-semibold text-slate-800">Как делать:</span> Мозговой штурм, собирается команда, все идеи записываются без критики</p>
+                                        <p><span class="font-semibold text-slate-800">Важно:</span> Чем больше идей — тем лучше, даже самые странные</p>
+                                    </div>
+                                </div>
+
+                                <div class="p-6 border-green-200 rounded-xl border bg-white">
+                                    <div class="flex items-start gap-3 mb-3">
+                                        <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                        <h3 class="text-xl font-semibold text-green-700">4. Выбор идеи</h3>
+                                    </div>
+                                    <div class="ml-9 space-y-3 text-slate-700 text-lg">
+                                        <p><span class="font-semibold text-slate-800">Задача:</span> Выбрать лучшую идею из всех предложенных</p>
+                                        <p><span class="font-semibold text-slate-800">Как делать:</span> Анализировать плюсы и минусы каждой идеи, голосовать командой</p>
+                                        <p><span class="font-semibold text-slate-800">Можно:</span> Объединить несколько идей в одну</p>
+                                    </div>
+                                </div>
+
+                                <div class="p-6 border-purple-200 rounded-xl border bg-white">
+                                    <div class="flex items-start gap-3 mb-3">
+                                        <svg class="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                                        </svg>
+                                        <h3 class="text-xl font-semibold text-purple-700">5. Прототипирование</h3>
+                                    </div>
+                                    <div class="ml-9 space-y-3 text-slate-700 text-lg">
+                                        <p><span class="font-semibold text-slate-800">Задача:</span> Создать прототип (пробный вариант) и проверить его</p>
+                                        <p><span class="font-semibold text-slate-800">Как делать:</span> Создать быстрый и дешевый прототип, отдать пользователям для тестирования</p>
+                                        <p><span class="font-semibold text-slate-800">Важно:</span> Получить обратную связь — что удобно, что не нравится, почему</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent my-8"></div>
+
+                        <div>
+                            <h2 class="text-2xl font-semibold text-slate-800 mb-6">Инструменты дизайн-мышления:</h2>
+                            
+                            <div class="space-y-6">
+                                <div class="p-6 bg-gradient-to-br from-blue-50 to-indigo-50 border-blue-200 rounded-xl border">
+                                    <h3 class="text-xl font-semibold text-blue-700 mb-4">Карта эмпатии</h3>
+                                    <p class="text-slate-700 mb-4 text-lg">
+                                        Позволяет понять пользователя по 4 направлениям:
+                                    </p>
+                                    <div class="grid md:grid-cols-2 gap-4">
+                                        <div class="flex items-start gap-3">
+                                            <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                            </svg>
+                                            <div>
+                                                <p class="font-semibold text-slate-800 mb-1">Что он ВИДИТ?</p>
+                                                <p class="text-slate-600">(окружение, друзья, рынок)</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"/>
+                                            </svg>
+                                            <div>
+                                                <p class="font-semibold text-slate-800 mb-1">Что он СЛЫШИТ?</p>
+                                                <p class="text-slate-600">(что говорят друзья, начальник)</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                            </svg>
+                                            <div>
+                                                <p class="font-semibold text-slate-800 mb-1">Что он ДУМАЕТ и ЧУВСТВУЕТ?</p>
+                                                <p class="text-slate-600">(страхи, радости, проблемы)</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                                            </svg>
+                                            <div>
+                                                <p class="font-semibold text-slate-800 mb-1">Что он ГОВОРИТ и ДЕЛАЕТ?</p>
+                                                <p class="text-slate-600">(как ведет себя, как выглядит)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-6 bg-gradient-to-br from-purple-50 to-violet-50 border-purple-200 rounded-xl border">
+                                    <h3 class="text-xl font-semibold text-purple-700 mb-4">Карта пути клиента (CJM)</h3>
+                                    <p class="text-slate-700 mb-3 text-lg">Показывает:</p>
+                                    <ul class="list-disc list-inside space-y-2 text-slate-700 text-lg">
+                                        <li>Как пользователь начинает работать с продуктом</li>
+                                        <li>Что происходит на каждом этапе</li>
+                                        <li>Какие проблемы возникают</li>
+                                        <li>Что он чувствует в каждый момент (страх, радость, сомнения)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- UX/UI Дизайн -->
+    <div id="ux-ui" class="page">
+        <div class="min-h-screen py-12 px-4 sm:px-6 lg:px-8 mt-16">
+            <div class="max-w-5xl mx-auto">
+                <div class="flex gap-3 mb-8">
+                    <button onclick="navigateTo('home')" class="flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur hover:bg-white border-slate-300 rounded-lg border transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                        </svg>
+                        Главная
+                    </button>
+                </div>
+
+                <div class="bg-white/90 backdrop-blur rounded-2xl shadow-xl border border-slate-200 p-8 md:p-12">
+                    <h1 class="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                        UX/UI Дизайн: в чем разница и почему это важно
+                    </h1>
+                    
+                    <div class="space-y-8 prose prose-slate max-w-none">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 border-blue-200 rounded-xl border">
+                                <div class="flex items-start gap-3 mb-3">
+                                    <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                    </svg>
+                                    <h2 class="text-2xl font-semibold text-blue-700">UX (User Experience)</h2>
+                                </div>
+                                <p class="text-slate-700 mb-3 text-lg"><strong>Опыт пользователя</strong></p>
+                                <ul class="space-y-2 text-slate-700 text-lg">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-blue-600 flex-shrink-0">•</span>
+                                        <span>Отвечает на вопрос <strong>"КАК продукт работает?"</strong></span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-blue-600 flex-shrink-0">•</span>
+                                        <span>Это то, какой опыт пользователь получает при использовании сайта</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-blue-600 flex-shrink-0">•</span>
+                                        <span>UX-дизайнер анализирует сценарии поведения пользователя</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="p-6 bg-gradient-to-br from-purple-50 to-pink-50 border-purple-200 rounded-xl border">
+                                <div class="flex items-start gap-3 mb-3">
+                                    <svg class="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                                    </svg>
+                                    <h2 class="text-2xl font-semibold text-purple-700">UI (User Interface)</h2>
+                                </div>
+                                <p class="text-slate-700 mb-3 text-lg"><strong>Пользовательский интерфейс</strong></p>
+                                <ul class="space-y-2 text-slate-700 text-lg">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-purple-600 flex-shrink-0">•</span>
+                                        <span>Отвечает на вопрос <strong>"КАК продукт выглядит?"</strong></span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-purple-600 flex-shrink-0">•</span>
+                                        <span>Это цвета, шрифты, кнопки, иконки — все что видит пользователь</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-purple-600 flex-shrink-0">•</span>
+                                        <span>UI-дизайнер разрабатывает визуальную часть</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="p-6 bg-gradient-to-br from-green-50 to-emerald-50 border-green-200 rounded-xl border">
+                            <h2 class="text-2xl font-semibold text-green-700 mb-4">Простыми словами:</h2>
+                            <div class="space-y-3 text-slate-700 text-lg">
+                                <p class="flex items-start gap-2">
+                                    <span class="font-semibold text-blue-600">UX</span>
+                                    <span>— это удобство: легко ли найти нужную информацию, понятны ли кнопки</span>
+                                </p>
+                                <p class="flex items-start gap-2">
+                                    <span class="font-semibold text-purple-600">UI</span>
+                                    <span>— это красота: приятные цвета, красивые шрифты, гармоничное расположение элементов</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent my-8"></div>
+
+                        <div>
+                            <h2 class="text-2xl font-semibold text-slate-800 mb-6">Процесс работы UX/UI-дизайнера:</h2>
+                            
+                            <div class="space-y-4">
+                                <div class="p-5 border-blue-200 hover:shadow-lg transition-shadow rounded-xl border bg-white">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex-shrink-0 font-bold">1</div>
+                                        <div>
+                                            <h3 class="text-lg font-semibold text-blue-700 mb-1">Получение задачи</h3>
+                                            <p class="text-slate-600">понять что нужно сделать</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-5 border-indigo-200 hover:shadow-lg transition-shadow rounded-xl border bg-white">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-100 text-indigo-700 flex-shrink-0 font-bold">2</div>
+                                        <div>
+                                            <h3 class="text-lg font-semibold text-indigo-700 mb-1">Исследование</h3>
+                                            <p class="text-slate-600">изучить пользователей и конкурентов</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-5 border-purple-200 hover:shadow-lg transition-shadow rounded-xl border bg-white">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-100 text-purple-700 flex-shrink-0 font-bold">3</div>
+                                        <div>
+                                            <h3 class="text-lg font-semibold text-purple-700 mb-1">Прототипирование</h3>
+                                            <p class="text-slate-600">создать черновой макет</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-5 border-pink-200 hover:shadow-lg transition-shadow rounded-xl border bg-white">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex items-center justify-center w-8 h-8 rounded-full bg-pink-100 text-pink-700 flex-shrink-0 font-bold">4</div>
+                                        <div>
+                                            <h3 class="text-lg font-semibold text-pink-700 mb-1">Проектирование визуальной части</h3>
+                                            <p class="text-slate-600">сделать дизайн красивым</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-5 border-rose-200 hover:shadow-lg transition-shadow rounded-xl border bg-white">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex items-center justify-center w-8 h-8 rounded-full bg-rose-100 text-rose-700 flex-shrink-0 font-bold">5</div>
+                                        <div>
+                                            <h3 class="text-lg font-semibold text-rose-700 mb-1">Проверка решения</h3>
+                                            <p class="text-slate-600">протестировать с пользователями</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-5 border-amber-200 hover:shadow-lg transition-shadow rounded-xl border bg-white">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex items-center justify-center w-8 h-8 rounded-full bg-amber-100 text-amber-700 flex-shrink-0 font-bold">6</div>
+                                        <div>
+                                            <h3 class="text-lg font-semibold text-amber-700 mb-1">Разработка</h3>
+                                            <p class="text-slate-600">передать готовый макет программистам</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent my-8"></div>
+
+                        <div>
+                            <h2 class="text-2xl font-semibold text-slate-800 mb-6">Что входит в пользовательский интерфейс (UI):</h2>
+                            
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="p-5 border-blue-200 rounded-xl border bg-white">
+                                    <div class="flex items-start gap-3">
+                                        <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                        </svg>
+                                        <p class="text-slate-700 text-lg">Средства отображения информации (текст, картинки)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="p-5 border-indigo-200 rounded-xl border bg-white">
+                                    <div class="flex items-start gap-3">
+                                        <svg class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                        <p class="text-slate-700 text-lg">Командные режимы (кнопки, меню)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="p-5 border-purple-200 rounded-xl border bg-white">
+                                    <div class="flex items-start gap-3">
+                                        <svg class="w-5 h-5 text-purple-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
+                                        </svg>
+                                        <p class="text-slate-700 text-lg">Устройства ввода данных (клавиатура, мышь)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="p-5 border-pink-200 rounded-xl border bg-white">
+                                    <div class="flex items-start gap-3">
+                                        <svg class="w-5 h-5 text-pink-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                        </svg>
+                                        <p class="text-slate-700 text-lg">Диалоги между пользователем и компьютером</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="p-5 border-rose-200 rounded-xl border bg-white">
+                                    <div class="flex items-start gap-3">
+                                        <svg class="w-5 h-5 text-rose-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                                        </svg>
+                                        <p class="text-slate-700 text-lg">Обратная связь (сообщения об ошибках, подсказки)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="p-5 border-amber-200 rounded-xl border bg-white">
+                                    <div class="flex items-start gap-3">
+                                        <svg class="w-5 h-5 text-amber-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                        </svg>
+                                        <p class="text-slate-700 text-lg">Документация и инструкции</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-6 bg-gradient-to-br from-indigo-50 to-purple-50 border-indigo-200 rounded-xl border">
+                            <h2 class="text-2xl font-semibold text-indigo-700 mb-4">Чем занимается GUI-дизайнер (специалист по интерфейсам):</h2>
+                            <ul class="space-y-2 text-slate-700 text-lg">
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    <span>Знает стандарты проектирования интерфейсов</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    <span>Владеет средствами быстрого прототипирования</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    <span>Превращает требования по удобству в конкретные решения</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    <span>Разрабатывает прототипы интерфейсов</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Продолжение в следующем сообщении из-за ограничения размера -->
+
+    <script>
+        function navigateTo(pageId) {
+            // Скрыть все страницы
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Показать выбранную страницу
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+            
+            // Прокрутить в начало страницы
+            window.scrollTo(0, 0);
+        }
+
+        // При загрузке страницы показать главную
+        window.addEventListener('DOMContentLoaded', () => {
+            navigateTo('home');
+        });
+    </script>
+</body>
+</html>
